@@ -1,0 +1,386 @@
+/* POPPINS FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+    background: url("/images/background_login.png") no-repeat center center;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.side-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0 15px 15px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.side-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("/images/maskot_aom11.png") center/contain no-repeat;
+    z-index: 1;
+}
+
+.row {
+    width: 900px;
+    height: 550px;
+    border-radius: 15px;
+    background: transparent;
+    padding: 0px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.text p {
+    color: #fff;
+    font-size: 20px;
+}
+
+i {
+    font-weight: 400;
+    font-size: 15px;
+}
+.teks-top {
+    width: 70%;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.right {
+    background: rgba(40, 44, 52, 0);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 15px 0 0 15px;
+}
+
+.input-box {
+    width: 330px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+img {
+    width: 35px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.input-box header {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+    margin-bottom: 25px;
+}
+
+.input {
+    height: 50px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 20px;
+    color: #ffffff;
+    padding: 0 50px 0 50px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: center;
+    padding: 0 10px 0 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    min-height: 35px;
+}
+
+.input-field .input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.input-field .input-icon.email {
+    background-image: url("/images/icon_email.png");
+    top: 25px;
+}
+
+.input-field .input-icon.password {
+    background-image: url("/images/icon_gembok.png");
+    top: 25px;
+}
+
+.input-field .eye-icon {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("/images/icon_eye.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.input-field .eye-icon:hover {
+    opacity: 1;
+}
+
+.input-field .eye-icon.hide {
+    background-image: url("/images/icon_eye_hidden.png");
+    top: 25px;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input:focus {
+    border-color: #8b5cf6;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+.input-box .input-field label {
+    position: absolute;
+    top: 15px;
+    left: 55px;
+    pointer-events: none;
+    transition: 0.3s;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    background: transparent;
+    padding: 0 5px;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    top: -8px;
+    left: 25px;
+    font-size: 12px;
+    color: #8b5cf6;
+    background: rgba(40, 44, 52, 0.95);
+    padding: 0 8px;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    height: 50px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}
+
+.signin {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.backto {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.forgot {
+    margin-left: 10px;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+span a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #8b5cf6;
+    transition: 0.3s;
+}
+
+span a:hover {
+    text-decoration: underline;
+    color: #a78bfa;
+}
+
+/* Remember me checkbox styling */
+.form-check {
+    margin: 15px 10px;
+}
+
+.form-check-input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-check-input:checked {
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+}
+
+.form-check-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+/* Social login buttons */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        background: url("/images/background_login.png") no-repeat center center;
+        padding: 20px;
+    }
+
+    .main {
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .side-image {
+        display: none;
+    }
+
+    .row {
+        margin: 0 auto; /* supaya center horizontal */
+    }
+
+    .right {
+        top: 0; /* pastikan tidak geser */
+    }
+
+    .input-box {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .input-box header {
+        font-weight: 700;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 22px;
+    }
+
+    .backto {
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+
+    .text {
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+
+    .text p,
+    i {
+        font-size: 16px;
+    }
+}
