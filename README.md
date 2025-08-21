@@ -152,21 +152,21 @@ Key configuration variables:
 ```env
 APP_NAME="Art of Manunggalan 11.0"
 APP_ENV=local
-APP_KEY=base64:hB5Z30aTTnfTfZk6XvQZT7r1aSPO3MZyG7SzaGP+Ies=
+APP_KEY=
 APP_DEBUG=true
-APP_URL=https://artofmanunggalan10.hmjtipolije.com/
+APP_URL=127.0.0.1:8000
 
 # Database Configuration
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=aom11
-DB_USERNAME=root
+DB_DATABASE=
+DB_USERNAME=
 DB_PASSWORD=
 
 # Midtrans Configuration
-MIDTRANS_SERVER_KEY=SB-Mid-server-RCGL6qrq9JC8mr89ajRhR9xV
-MIDTRANS_CLIENT_KEY=SB-Mid-client-UqiJMUuzKY5eiovw
+MIDTRANS_SERVER_KEY=SB-Mid-server-
+MIDTRANS_CLIENT_KEY=SB-Mid-client-
 MIDTRANS_IS_PRODUCTION=false
 MIDTRANS_IS_SANITIZED=true
 MIDTRANS_IS_3DS=true
